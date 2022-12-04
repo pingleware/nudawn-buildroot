@@ -58,6 +58,11 @@ Start,
 
 ![BUILDROOT](images/buildroot-010.png)
 
+	In System configuration --> Root filesystem overlay directories
+
+![BUILDROOT](images/buildroot-012.png)
+![BUILDROOT](images/buildroot-013.png)
+
 then save and exit,
 
 ![BUILDROOT](images/buildroot-011.png)
@@ -73,6 +78,8 @@ then rebuild,
 To test qemu with networking support,
 
 	qemu-system-i386 -serial stdio -cdrom buildroot/output/images/rootfs.iso9660 -m 256 -M pc -nic user,model=virtio-net-pci
+
+![QEMU](assets/booting.ogv)
 
 or create a test.sh
 
