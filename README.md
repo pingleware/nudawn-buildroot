@@ -26,16 +26,41 @@ Start,
 
 	make --directory buildroot menuconfig
 
+![BUILDROOT Main Index](images/buildroot-001.png)
+
 	In Kernels --> Linux Kernel
+
+![BUILDROOT](images/buildroot-002.png)
+
                defconfig = i386
 
+![BUILDROOT](images/buildroot-003.png)
+![BUILDROOT](images/buildroot-004.png)
+![BUILDROOT](images/buildroot-005.png)
+
 	In Toolchain --> Enable C++ Support
+
+![BUILDROOT](images/buildroot-006.png)
+
 	In Bootloaders --> syslinux
+
+![BUILDROOT](images/buildroot-007.png)
+
 	In Filesystem images --> isoimage
+
+![BUILDROOT](images/buildroot-008.png)
+
 	In Target packages --> Text editors and views --> nano
+
+![BUILDROOT](images/buildroot-009.png)
+
 	In Target packages --> Network application --> dnsmasq
 
+![BUILDROOT](images/buildroot-010.png)
+
 then save and exit,
+
+![BUILDROOT](images/buildroot-011.png)
 
 now configure the linux kernel by
 
