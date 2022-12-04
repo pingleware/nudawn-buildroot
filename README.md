@@ -79,7 +79,7 @@ To test qemu with networking support,
 
 	qemu-system-i386 -serial stdio -cdrom buildroot/output/images/rootfs.iso9660 -m 256 -M pc -nic user,model=virtio-net-pci
 
-![QEMU](assets/booting.ogv)
+![QEMU](images/qemu.png)
 
 or create a test.sh
 
