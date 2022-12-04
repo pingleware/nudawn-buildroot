@@ -32,8 +32,8 @@ Start,
 	In Toolchain --> Enable C++ Support
 	In Bootloaders --> syslinux
 	In Filesystem images --> isoimage
-	In Text editors and views --> nano
-	In Network application --> dnsmasq
+	In Target packages --> Text editors and views --> nano
+	In Target packages --> Network application --> dnsmasq
 
 then save and exit,
 
