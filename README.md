@@ -79,11 +79,11 @@ To test qemu with networking support,
 
 	qemu-system-i386 -serial stdio -cdrom buildroot/output/images/rootfs.iso9660 -m 256 -M pc -nic user,model=virtio-net-pci
 
-![QEMU](images/qemu.png)
-
 or create a test.sh
 
 	echo qemu-system-i386 -serial stdio -cdrom buildroot/output/images/rootfs.iso9660 -m 256 -M pc -nic user,model=virtio-net-pci > test.sh && sudo chmod +x test.sh
+
+![QEMU](images/qemu.png)
 
 ## Built-in configs
   aarch64_efi_defconfig               - Build for aarch64_efi
