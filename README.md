@@ -5,11 +5,11 @@ Starting with a clean build,
 
 or
 
-	cd buildroot && make clean
+	make --directory buildroot clean
 
 then following a new build
 
-	make
+	make --directory buildroot
 
 upon completiong, there will exists only,
 
@@ -24,7 +24,7 @@ and nothing happens, because we need a kernel,
 ## Configuring the Kernel
 Start,
 
-	make menuconfig
+	make --directory buildroot menuconfig
 
 	In Kernels --> Linux Kernel
                defconfig = i386
@@ -39,20 +39,17 @@ then save and exit,
 
 now configure the linux kernel by
 
-	make linux-menuconfig
+	make --directory buildroot linux-menuconfig
 
 then rebuild,
 
-	make
+	make --directory buildroot
 
 To test qemu with networking support,
 
-	qemu-system-i386 -serial stdio -cdrom output/images/rootfs.iso9660 -m 256 -M pc -nic user,model=virtio-net-pci
+	qemu-system-i386 -serial stdio -cdrom buildroot/output/images/rootfs.iso9660 -m 256 -M pc -nic user,model=virtio-net-pci
 
 or create a test.sh
 
-	echo qemu-system-i386 -serial stdio -cdrom output/images/rootfs.iso9660 -m 256 -M pc -nic user,model=virtio-net-pci > test.sh && sudo chmod +x test.sh
+	echo qemu-system-i386 -serial stdio -cdrom buildroot/output/images/rootfs.iso9660 -m 256 -M pc -nic user,model=virtio-net-pci > test.sh && sudo chmod +x test.sh
 
-# Enable overlay
-
-	BR2_ROOTFS_OVERLAY
